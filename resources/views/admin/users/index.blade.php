@@ -5,21 +5,21 @@
 @section('content')
     @include('admin.users.partials.breadcrumb')
     <div class="py-1 mb-4">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight mb-4">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight mb-4">
             Usuários
         </h2>
 
         <a href="{{ route('users.create') }}"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
             <i class="fa-solid fa-plus" aria-hidden="true"></i> Cadastrar
         </a>
     </div>
 
     <x-alert />
 
-    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-4">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
+        <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr>
                     <th scope="col" class="px-6 py-4">Nome</th>
                     <th scope="col" class="px-6 py-4">E-mail</th>
@@ -28,7 +28,7 @@
             </thead>
             <tbody class="text-gray-600 text-sm font-light">
                 @forelse ($users as $user)
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <tr class="bg-white border-b">
                         <td class="px-6 py-4">{{ $user->name }}</td>
                         <td class="px-6 py-4">{{ $user->email }}</td>
                         <td class="px-6 py-4">
