@@ -14,9 +14,15 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::paginate(15); // User::all();
+        // $users = User::paginate(15); // User::all();
 
-        return view('admin.users.index', compact('users'));
+        // return view('admin.users.index', compact('users'));
+
+        $user = User::first();
+        return view(
+            'admin.users.index',
+            compact('user')
+        );
     }
 
     public function create()
