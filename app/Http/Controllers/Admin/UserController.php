@@ -14,14 +14,14 @@ class UserController extends Controller
 {
     public function index()
     {
-        // $users = User::paginate(15); // User::all();
+        // $user = User::first(); // primeiro usuário
+        // dd($users); //dum e die para debugar variável
+        // $users = User::all(); //buscar todos os usuários
 
-        // return view('admin.users.index', compact('users'));
-
-        $user = User::first();
+        $users = User::paginate(15);
         return view(
             'admin.users.index',
-            compact('user')
+            compact('users')
         );
     }
 

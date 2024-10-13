@@ -1,1 +1,26 @@
-<h1 class="px-6 py-4">{{ $user->name }}</h1>
+<h1 class="px-6 py-4">Usuários</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @forelse ($users as $user)
+            <tr>
+                <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
+                <td>---</td>
+            </tr>
+        @empty
+            <tr>
+                <td colspan="100">Nenhum usuário encontrado!</td>
+            </tr>
+        @endforelse
+    </tbody>
+</table>
+
+{{ $users->links() }}
