@@ -14,6 +14,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that are mass assignable.
+     * Atributos que devem ser preenchidos
      *
      * @var array<int, string>
      */
